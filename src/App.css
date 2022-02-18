@@ -2,6 +2,14 @@
     float:right;
 }
 
+.fltLeftEnd {
+    float:left;
+}
+
 .logout{
     cursor:pointer;
+}
+
+.w50 {
+    width:50% !important;
 }

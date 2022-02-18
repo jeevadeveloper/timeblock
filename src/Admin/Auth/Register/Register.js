@@ -32,7 +32,7 @@ const Register = () => {
             
         signUp(email,password).then((response) => {
             const data = {
-                user: response.user.displayName,
+                user: name,
                 id: response.user.uid
             }
                     updateProfileData(name).then((response)=>{
