@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const Dashboard = () => {
     const[category,setCategory] = useState("");
     const[categoryArray,setCategoryArray] = useState([]);
-    console.log(getStore())
+    const[counter,setCounter] = useState(0);
     if(!getUserDetails()) {
         return <Navigate to="/admin/login" />
     }
@@ -16,6 +16,7 @@ const Dashboard = () => {
         if(getStore().auth[0].isLoggedIn){
             var cat = getCategory(getStore().auth[0].user_id);
            setTimeout(() => {
+            setCounter(counter => counter+1)
             setCategoryArray(cat)
            }, 200);
         }
